@@ -1,0 +1,15 @@
+# Android studio
+.idea/
+.gradle/
+build/
+local.properties
+captures/
+*.iml
+*.iws
+*.ipr
+
+# Temp files
+*~
+
+# Sentry settings
+sentry.properties

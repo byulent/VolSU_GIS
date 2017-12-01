@@ -1,0 +1,75 @@
+/*
+ * Project:  NextGIS Mobile
+ * Purpose:  Mobile GIS for Android.
+ * Author:   Dmitry Baryshnikov (aka Bishop), bishop.dev@gmail.com
+ * Author:   NikitaFeodonit, nfeodonit@yandex.com
+ * Author:   Stanislav Petriakov, becomeglory@gmail.com
+ * *****************************************************************************
+ * Copyright (c) 2012-2017 NextGIS, info@nextgis.com
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    // Setup the Sentry DSN from the file 'sentry.properties', which should contain
+    // sentry.dsn=https://publicKey:secretKey@host:port/1?options
+    // DO NOT PUBLIC the file 'sentry.properties' !!!
+    File sentryPropFile = rootProject.file('sentry.properties')
+    String sentryDsn = ""
+    if (sentryPropFile.exists()) {
+        Properties sentryProp = new Properties()
+        sentryProp.load(sentryPropFile.newDataInputStream())
+        sentryDsn = sentryProp.get("sentry.dsn")
+    }
+
+    defaultConfig {
+        applicationId 'com.volsu.gis'
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 33
+        versionName '2.5.6.8'
+        archivesBaseName = "ngmobile-$versionName"
+        buildConfigField "String", "SENTRY_DSN", "\"${sentryDsn}\""
+    }
+
+    productFlavors {
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':maplibui')
+    compile 'com.joshdholtz.sentry:sentry-android:1.6.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.google.android.gms:play-services-analytics:11.6.0'
+    compile 'com.github.TechFreak:WizardPager:1.0.3'
+}

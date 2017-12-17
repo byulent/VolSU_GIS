@@ -64,6 +64,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.volsu.gis.dialog.SendMessageDialog;
 import com.volsu.maplib.api.GpsEventListener;
 import com.volsu.maplib.api.ILayer;
 import com.volsu.maplib.api.ILayerView;
@@ -135,6 +136,7 @@ public class MapFragment
     protected FloatingActionButton mRuler;
     protected FloatingActionButton mAddNewGeometry;
     protected FloatingActionButton mAddPointButton;
+    protected FloatingActionButton mMail;
 
     protected TextView mStatusSource, mStatusAccuracy, mStatusSpeed, mStatusAltitude,
             mStatusLatitude, mStatusLongitude;
@@ -720,6 +722,9 @@ public class MapFragment
         mMainButton = view.findViewById(R.id.multiple_actions);
         mAddPointButton = (FloatingActionButton) view.findViewById(R.id.add_point_by_tap);
         mAddPointButton.setOnClickListener(this);
+
+        mMail = (FloatingActionButton) view.findViewById(R.id.send_message);
+        mMail.setOnClickListener(this);
 
         View addCurrentLocation = view.findViewById(R.id.add_current_location);
         addCurrentLocation.setOnClickListener(this);
@@ -1895,7 +1900,15 @@ public class MapFragment
                 startMeasuring();
                 Toast.makeText(getContext(), R.string.tap_to_measure, Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.send_message:
+                showSendDialog();
+                break;
         }
+    }
+
+    protected void showSendDialog(){
+        SendMessageDialog dialog = new SendMessageDialog();
+        dialog.show(getFragmentManager(), "SendMessageDialog");
     }
 
     protected void startMeasuring() {

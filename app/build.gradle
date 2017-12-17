@@ -42,8 +42,8 @@ android {
         applicationId 'com.volsu.gis'
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 33
-        versionName '2.5.6.8'
+        versionCode 01
+        versionName '0.0.1-alpha'
         archivesBaseName = "ngmobile-$versionName"
         buildConfigField "String", "SENTRY_DSN", "\"${sentryDsn}\""
     }

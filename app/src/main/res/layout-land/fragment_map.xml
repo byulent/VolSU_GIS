@@ -41,7 +41,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/frameLayout">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_ruler"
@@ -170,4 +171,16 @@
             fab:fab_icon="@drawable/ic_action_maps_place"
             fab:fab_size="mini"/>
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_ruler"
+        android:layout_toLeftOf="@+id/multiple_actions"
+        android:layout_toStartOf="@+id/multiple_actions"
+        fab:fab_colorNormal="?attr/colorPrimary"
+        fab:fab_colorPressed="?attr/colorAccent"
+        fab:fab_icon="@drawable/ic_mail"
+        fab:fab_size="mini" />
 </RelativeLayout>

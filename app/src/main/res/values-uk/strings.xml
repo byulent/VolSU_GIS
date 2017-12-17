@@ -154,4 +154,5 @@
     <string name="intro_more">Отримайте більше:</string>
     <string name="intro_free">У вас безкоштовна версія застосунку</string>
     <string name="intro_get_pro">Отримати NextGIS Mobile Pro</string>
+    <string name="app_name">VolSU GIS</string>
 </resources>

@@ -177,4 +177,16 @@
             fab:fab_icon="@drawable/ic_action_maps_place"
             fab:fab_size="mini"/>
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_ruler"
+        android:layout_toLeftOf="@+id/multiple_actions"
+        android:layout_toStartOf="@+id/multiple_actions"
+        fab:fab_colorNormal="?attr/colorPrimary"
+        fab:fab_colorPressed="?attr/colorAccent"
+        fab:fab_icon="@drawable/ic_mail"
+        fab:fab_size="mini" />
 </RelativeLayout>

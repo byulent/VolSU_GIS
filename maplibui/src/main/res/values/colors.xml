@@ -43,10 +43,10 @@
 
 
     <!-- Common -->
-    <color name="actionBarColor">#8003a9f4</color>
-    <color name="primary">#03a9f4</color>
-    <color name="primary_dark">#01579b</color>
-    <color name="accent">#03a9f4</color>
+    <color name="actionBarColor">#80036997</color>
+    <color name="primary">#036997</color>
+    <color name="primary_dark">#104273</color>
+    <color name="accent">#036997</color>
     <color name="tabsScrollColor">#4db6ac</color>
     <color name="light_pressed">#D8E3E9</color>
     <color name="dark_pressed">#036997</color>

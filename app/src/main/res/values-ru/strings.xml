@@ -159,4 +159,7 @@
     <string name="intro_get_pro">Получить NextGIS Mobile Pro</string>
     <string name="app_name">ГИС ВолГУ</string>
     <string name="send_message_coming_soon">Эта возможность вскоре будет реализована.</string>
+    <string name="message">Cообщение</string>
+    <string name="name">Имя</string>
+    <string name="contact_us">Написать нам</string>
 </resources>

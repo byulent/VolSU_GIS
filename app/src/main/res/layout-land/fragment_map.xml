@@ -22,7 +22,7 @@
   ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<RelativeLayout
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/maprl"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
@@ -92,7 +92,8 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/action_zoom_in"
@@ -176,9 +177,9 @@
         android:id="@+id/send_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ll_ruler"
-        android:layout_toLeftOf="@+id/multiple_actions"
-        android:layout_toStartOf="@+id/multiple_actions"
+        android:layout_above="@+id/multiple_actions"
+        android:layout_alignEnd="@+id/multiple_actions"
+        android:layout_alignRight="@+id/multiple_actions"
         fab:fab_colorNormal="?attr/colorPrimary"
         fab:fab_colorPressed="?attr/colorAccent"
         fab:fab_icon="@drawable/ic_mail"

@@ -136,7 +136,7 @@ public class MapFragment
     protected FloatingActionButton mRuler;
     protected FloatingActionButton mAddNewGeometry;
     protected FloatingActionButton mAddPointButton;
-    protected FloatingActionButton mMail;
+    protected FloatingActionButton mSendMessage;
 
     protected TextView mStatusSource, mStatusAccuracy, mStatusSpeed, mStatusAltitude,
             mStatusLatitude, mStatusLongitude;
@@ -723,8 +723,8 @@ public class MapFragment
         mAddPointButton = (FloatingActionButton) view.findViewById(R.id.add_point_by_tap);
         mAddPointButton.setOnClickListener(this);
 
-        mMail = (FloatingActionButton) view.findViewById(R.id.send_message);
-        mMail.setOnClickListener(this);
+        mSendMessage = (FloatingActionButton) view.findViewById(R.id.send_message);
+        mSendMessage.setOnClickListener(this);
 
         View addCurrentLocation = view.findViewById(R.id.add_current_location);
         addCurrentLocation.setOnClickListener(this);

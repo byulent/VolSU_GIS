@@ -181,4 +181,5 @@
         fab:fab_colorPressed="?attr/colorAccent"
         fab:fab_icon="@drawable/ic_mail"
         fab:fab_size="mini" />
+
 </RelativeLayout>

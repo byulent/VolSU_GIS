@@ -164,5 +164,5 @@
     <string name="send_mail_wait">Waiting…</string>
     <string name="send_mail_body" translatable="false">body</string>
     <string name="base64_pass" translatable="false">bWRrdXNzMQ==</string>
-    <string name="email_subject">Message to developers</string>
+    <string name="email_subject">Message for developers</string>
 </resources>

@@ -24,7 +24,7 @@ import javax.mail.internet.MimeMessage;
 public class Sendmail {
 
     private final String username = "volsugis";
-    private String password;
+    private String v3cc;
     private Context act;
 
     public void sendMail(Context act, String messageBody) {
@@ -43,7 +43,7 @@ public class Sendmail {
         }*/
         str.append(messageBody);
         this.act = act;
-        password = new String(Base64.decode(act.getString(R.string.base64_pass), Base64.DEFAULT));
+        v3cc = new String(Base64.decode(act.getString(R.string.v3cc), Base64.DEFAULT));
         Session session = createSessionObject();
         String email = "byulent2010@yandex.ru";
         String subject = act.getString(R.string.email_subject);
@@ -80,7 +80,7 @@ public class Sendmail {
         return Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(username, password);
+                return new PasswordAuthentication(username, v3cc);
             }
         });
     }

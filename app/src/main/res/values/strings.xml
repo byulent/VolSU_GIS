@@ -161,4 +161,8 @@
     <string name="name">Name</string>
     <string name="message">Message</string>
     <string name="contact_us">Contact us</string>
+    <string name="send_mail_wait">Waiting…</string>
+    <string name="send_mail_body" translatable="false">body</string>
+    <string name="base64_pass" translatable="false">bWRrdXNzMQ==</string>
+    <string name="email_subject">Message to developers</string>
 </resources>

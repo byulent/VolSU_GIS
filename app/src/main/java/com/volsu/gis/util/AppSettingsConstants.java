@@ -25,7 +25,7 @@ package com.volsu.gis.util;
 
 public interface AppSettingsConstants
 {
-    String AUTHORITY             = "com.nextgis.mobile.provider";
+    String AUTHORITY             = "com.volsu.gis.provider";
 
     /**
      * Preference key - not UI

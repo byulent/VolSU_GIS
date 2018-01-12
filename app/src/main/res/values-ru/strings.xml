@@ -162,4 +162,6 @@
     <string name="message">Cообщение</string>
     <string name="name">Имя</string>
     <string name="contact_us">Написать нам</string>
+    <string name="email_subject">Сообщение для разработчиков</string>
+    <string name="send_mail_wait">Сообщение отправляется…</string>
 </resources>
